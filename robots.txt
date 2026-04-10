@@ -1,0 +1,25 @@
+# SEO Optimization - robots.txt for Quốc Gia Tam Thoại
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /.env
+Disallow: /.git/
+Crawl-delay: 1
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+Disallow: /admin
+Crawl-delay: 0
+
+# Bing specific
+User-agent: Bingbot
+Allow: /
+Disallow: /admin
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://quoc-gia-tam-thoai.vercel.app/sitemap.xml

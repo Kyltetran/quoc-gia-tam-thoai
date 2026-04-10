@@ -1,0 +1,79 @@
+{
+  "name": "Quốc Gia Tam Thoại - Đọc Quốc Gia Huyết Lệ Qua Ba Tiếng Nói",
+  "short_name": "Quốc Gia Tam Thoại",
+  "description": "Khám phá Quốc Gia Huyết Lệ thông qua ba tiếng nói cải cách tiêu biểu: Phan Bội Châu, Đạm Phương nữ sử, Phan Văn Trường. Nghe bình luận lịch sử qua AI text-to-speech.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#770A0F",
+  "background_color": "#F5F1E6",
+  "lang": "vi",
+  "dir": "ltr",
+  "categories": ["education", "lifestyle"],
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Mega_promptminimalist_hero_background_for_a_vietna_delpmaspu.png-jD32OX5RCwICR4YgIXu18aUSj3xWyg.jpeg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    },
+    {
+      "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Mega_promptminimalist_hero_background_for_a_vietna_delpmaspu.png-jD32OX5RCwICR4YgIXu18aUSj3xWyg.jpeg",
+      "sizes": "540x720",
+      "type": "image/jpeg",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Bắt đầu hành trình",
+      "short_name": "Bắt đầu",
+      "description": "Bắt đầu khám phá Quốc Gia Huyết Lệ",
+      "url": "/?step=intro",
+      "icons": [
+        {
+          "src": "/favicon-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}
