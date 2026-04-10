@@ -1,0 +1,7 @@
+{
+  "name": "Quốc Gia Tam Thoại",
+  "description": "Một trải nghiệm đối thoại tương tác dựa trên tác phẩm Quốc Gia Huyết Lệ của Phan Châu Trinh, khám phá tư tưởng cải cách qua ba góc nhìn trí thức.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

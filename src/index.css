@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Newsreader", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Newsreader", serif;
+  --color-paper: #F1E7CE;
+  --color-vermilion: #770A0F;
+  --color-deep-brown: #4A3B2D;
+}
+
+@layer base {
+  body {
+    @apply bg-paper text-deep-brown font-sans antialiased;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #770A0F;
+    opacity: 0.3;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    opacity: 0.5;
+  }
+}
+
+@layer components {
+  .editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+  }
+
+  .header-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  .drop-cap::first-letter {
+    float: left;
+    font-size: 5rem;
+    line-height: 1;
+    padding-right: 0.5rem;
+    color: #770A0F;
+    font-weight: 800;
+  }
+
+  /* Dialogue chat bubbles */
+  .dialogue-bubble {
+    @apply p-4 rounded-sm backdrop-blur-sm;
+    animation: slideIn 0.3s ease-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .dialogue-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #770A0F #F1E7CE;
+  }
+
+  /* Audio player animation */
+  @keyframes pulse-play {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.6;
+    }
+  }
+
+  .audio-playing {
+    animation: pulse-play 1.5s ease-in-out infinite;
+  }
+
+  /* Emblem circle animations */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  .emblem-circle {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes glow {
+    0%, 100% {
+      filter: drop-shadow(0 0 8px rgba(119, 10, 15, 0.3));
+    }
+    50% {
+      filter: drop-shadow(0 0 16px rgba(119, 10, 15, 0.5));
+    }
+  }
+
+  .emblem-glow {
+    animation: glow 3s ease-in-out infinite;
+  }
+
+  /* Heritage pattern background */
+  @keyframes subtleSpin {
+    0% {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .heritage-pattern {
+    animation: subtleSpin 120s linear infinite;
+    opacity: 0.03;
+  }
+}
