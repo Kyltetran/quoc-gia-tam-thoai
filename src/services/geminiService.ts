@@ -180,7 +180,7 @@ ${personaPrompt}
 Trích dẫn cần bình luận: "${quote}"`;
 
   const response = await ai.models.generateContent({
-    model: "gemini-3-flash-preview",
+    model: "gemini-1.5-flash",
     contents: [{ parts: [{ text: fullPrompt }] }],
     config: { temperature },
   });
@@ -197,7 +197,7 @@ export async function textToSpeech(text: string, voiceName: string, lang: 'vi' |
       : `${lang === 'en' ? 'In English: ' : 'Bằng tiếng Việt: '}${text}`;
 
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash-preview-tts",
+      model: "gemini-1.5-flash",
       contents: [{ parts: [{ text: fullPrompt }] }],
       config: {
         responseModalities: [Modality.AUDIO],
@@ -257,7 +257,7 @@ export async function transcribeAudio(base64Audio: string, lang: 'vi' | 'en' = '
       : "Please transcribe this English audio accurately.";
 
     const response = await ai.models.generateContent({
-      model: "gemini-3-flash-preview",
+      model: "gemini-1.5-flash",
       contents: [
         {
           parts: [
