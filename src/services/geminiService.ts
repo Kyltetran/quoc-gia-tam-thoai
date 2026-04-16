@@ -1,6 +1,10 @@
 import { GoogleGenAI, Modality } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
+// const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
+
+const ai = new GoogleGenAI({
+  apiKey: "AQ.Ab8RN6KvIvuUMXvNOgnG6EKM-v8J_7jSIElHBG7ghfmZorWVBA"
+});
 
 interface Persona {
   name: { vi: string; en: string };
